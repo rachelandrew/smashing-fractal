@@ -1,0 +1,8 @@
+$color1: rebeccapurple;
+
+// Import scss files from all the components
+@import "../../components/**/*.scss";
+
+body {
+    background-color: white;
+}

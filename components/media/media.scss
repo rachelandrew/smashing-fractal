@@ -1,0 +1,98 @@
+img {
+    max-width: 100%;
+}
+.media > .title { 
+    grid-area: title; 
+}
+
+.media > .img { 
+    grid-area: img; 
+}
+
+.media > .content { 
+    grid-area: bd; 
+}
+
+.media > .footer { 
+    grid-area: ft; 
+}
+
+
+.media {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-areas:
+      "title"
+      "img"
+      "bd"
+      "ft";
+  }
+  
+  
+  @media (min-width: 600px) {
+    /* clearfix*/
+  .media:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .media > .media {
+    margin-left: 160px;
+    clear: both;
+  }
+
+  .media .img {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 150px;
+  }
+
+  .media.media-flip .img {
+    float: right;
+    margin: 0 0 0 10px;
+  }
+
+  .media > * {
+    margin: 0 0 0 160px;
+  }
+
+  .media.media-flip > * {
+    margin: 0 160px 0 0;
+  }
+
+    .media {
+        margin-bottom: 2em;
+        display: grid;
+        grid-column-gap: 20px;
+        grid-template-columns: 200px 3fr;
+        grid-template-areas:
+        "img title"
+        "img bd"
+        "img ft";
+    }
+
+    .media.media-flip {
+        grid-template-columns: 3fr 200px ;
+        grid-template-areas:
+        "title img"
+        "bd img"
+        "ft img";
+    }
+
+    @supports(display: grid) {
+        /* override */
+    .media > *,
+    .media.media-flip > * {
+      margin: 0;
+    }
+    .media .img,
+    .media.media-flip .img {
+      width: auto;
+      margin: 0;
+    }
+    .media:after {
+      content: none;
+    }
+    }
+  }

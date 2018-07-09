@@ -1,0 +1,4 @@
+title: Example component
+context:
+    text: This is an example component!
+    heading: My heading

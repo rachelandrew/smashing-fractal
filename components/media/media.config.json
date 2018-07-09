@@ -1,0 +1,14 @@
+{
+    "title": "Media Object",
+    "context": {
+        "modifier": "default"
+    },
+    "variants": [
+        {
+            "name": "Flipped",
+            "context": {
+                "modifier": "flip"
+            }
+        }
+    ]
+}
